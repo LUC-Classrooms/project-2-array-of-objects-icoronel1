@@ -12,6 +12,7 @@
 
 // Global Variables go here
 //var sprite1, sprite2;
+var m = 0
 var sprites = new Array(10); // initalizing sprite and creating an array with 10 elements
 
 function setup(){
