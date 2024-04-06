@@ -1,6 +1,6 @@
 /*
  Project 2 - Array of Objects
- Name: 
+ Name: Isa Coronel
  Comments: 
  */
 
@@ -11,16 +11,26 @@
 ***/
 
 // Global Variables go here
+//var sprite1, sprite2;
+var m = 0
+var sprites = new Array(10); // initalizing sprite and creating an array with 10 elements
 
 function setup(){
   // this function will run once
   createCanvas(600, 400); // create a 600 x 400 pixel drawing canvas
-
+  
+  for(let i = 0; i < sprites.length; i++){ //conditions for 'for loop.' initalize, compare and if true increase i by 1
+    sprites[i] = new Sprite(random(width), random(height));
+    console.log(sprites[i]); //communicate what's happening in program
+  }
 
 }
 
 function draw(){
   background(200); //light gray background
+  for(let i = 0; i < sprites.length; i++){ //same for loop routine
+    sprites[i].display(); //what is being executed each 60 seconds
+    sprites[i].move();
+  }
   
 }
-
